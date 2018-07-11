@@ -1,0 +1,29 @@
+Steps in canny_edge_detection
+
+0. Gray scale conversion
+
+1. Gaussian blur, smooth using Gaussian kernel
+
+2. Sobel filter
+
+   x direction using kernel
+
+   1 0 -1
+   2 0 -2
+   1 0 -1
+
+   y direction using kernel
+
+    1  2   1
+    0  0   0 
+   -1 -2  -1
+
+   Gradient in pixel is sqrt(result after kernel x^2 + result after kernel y^2)
+
+   direction of gradient atan(result after kernel y/ result after kernel x)
+
+3. nonmaximum suppression
+
+   0. with interpolation
+
+   1. without interpolation
